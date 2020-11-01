@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:text="FoxAndroid"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login/Signup"
+        android:textAlignment="center"
+       android:textSize="30sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Phone no.">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password_text_inputLayout"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="OTP.">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtotp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/otp_sent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OTP sent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/countdown_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29:00"
+            android:layout_above="@+id/get_otp"
+            android:layout_alignRight="@+id/get_otp"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/get_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/otp_sent"
+            android:text="GET OTP"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/otp_sent"
+            android:text="Resend OTP"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_below="@+id/get_otp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:text="Login"/>
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>
